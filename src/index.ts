@@ -5,4 +5,3 @@ export { IconButton } from './components/IconButton';
 // Types
 export type { ButtonProps } from './components/Button';
 export type { IconButtonProps } from './components/IconButton';
-
