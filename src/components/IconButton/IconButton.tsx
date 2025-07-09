@@ -1,20 +1,20 @@
 import React from 'react';
 
 export interface IconButtonProps {
-    /** L'icône à afficher (emoji ou caractère) */
-    icon: string;
-    /** Le texte alternatif pour l'accessibilité */
-    ariaLabel: string;
-    /** Le type de bouton (primary, secondary) */
-    variant?: 'primary' | 'secondary';
-    /** La taille du bouton */
-    size?: 'small' | 'medium' | 'large';
-    /** Si le bouton est désactivé */
-    disabled?: boolean;
-    /** Fonction appelée lors du clic */
-    onClick?: () => void;
-    /** Classe CSS personnalisée */
-    className?: string;
+  /** L'icône à afficher (emoji ou caractère) */
+  icon: string;
+  /** Le texte alternatif pour l'accessibilité */
+  ariaLabel: string;
+  /** Le type de bouton (primary, secondary) */
+  variant?: 'primary' | 'secondary';
+  /** La taille du bouton */
+  size?: 'small' | 'medium' | 'large';
+  /** Si le bouton est désactivé */
+  disabled?: boolean;
+  /** Fonction appelée lors du clic */
+  onClick?: () => void;
+  /** Classe CSS personnalisée */
+  className?: string;
 }
 
 /**

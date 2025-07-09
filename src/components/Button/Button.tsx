@@ -1,18 +1,18 @@
 import React from 'react';
 
 export interface ButtonProps {
-    /** Le texte affiché sur le bouton */
-    children: React.ReactNode;
-    /** Le type de bouton (primary, secondary) */
-    variant?: 'primary' | 'secondary';
-    /** La taille du bouton */
-    size?: 'small' | 'medium' | 'large';
-    /** Si le bouton est désactivé */
-    disabled?: boolean;
-    /** Fonction appelée lors du clic */
-    onClick?: () => void;
-    /** Classe CSS personnalisée */
-    className?: string;
+  /** Le texte affiché sur le bouton */
+  children: React.ReactNode;
+  /** Le type de bouton (primary, secondary) */
+  variant?: 'primary' | 'secondary';
+  /** La taille du bouton */
+  size?: 'small' | 'medium' | 'large';
+  /** Si le bouton est désactivé */
+  disabled?: boolean;
+  /** Fonction appelée lors du clic */
+  onClick?: () => void;
+  /** Classe CSS personnalisée */
+  className?: string;
 }
 
 /**
