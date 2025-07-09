@@ -2,13 +2,13 @@ name: CI
 
 on:
   push:
-    branches: ["**"]         # Lance la CI à chaque push sur toutes les branches
+    branches: ["**"] # Lance la CI à chaque push sur toutes les branches
   pull_request:
-    branches: [main]         # Et aussi à chaque PR vers "main"
+    branches: [main] # Et aussi à chaque PR vers "main"
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest   # Machine Linux virtuelle fournie par GitHub
+    runs-on: ubuntu-latest # Machine Linux virtuelle fournie par GitHub
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -16,16 +16,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20   # Adapte la version à celle de ton projet
+          node-version: 20 # Adapte la version à celle de ton projet
 
       - name: Install dependencies
-        run: npm ci          # "npm ci" = installation propre des dépendances
+        run: npm ci # "npm ci" = installation propre des dépendances
 
       - name: Build the library
-        run: npm run build   # Compile le projet (adapter si besoin)
+        run: npm run build # Compile le projet (adapter si besoin)
 
       - name: Run tests
-        run: npm test        # Lance tes tests unitaires
+        run: npm test # Lance tes tests unitaires
 
       - name: Lint code
         run: npm run lint
@@ -51,7 +51,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
         run: npm ci
