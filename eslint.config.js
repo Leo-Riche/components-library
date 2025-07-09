@@ -1,6 +1,7 @@
 import globals from "globals";
 import tseslint from "typescript-eslint";
 import js from "@eslint/js";
+import prettierConfig from "eslint-config-prettier";
 
 export default tseslint.config(
   { ignores: ['dist', 'node_modules'] },
@@ -8,7 +9,6 @@ export default tseslint.config(
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,
-      "prettier"
     ],
     languageOptions: {
       files: ['**/*.{ts,tsx}'],
@@ -20,11 +20,7 @@ export default tseslint.config(
         ...globals.es2021,
       },
     },
-    plugins: [
-      "prettier"
-    ],
     rules: {
-      "prettier/prettier": "error",
       "no-console": "warn",
       "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
       "semi": ["error", "always"],
@@ -35,5 +31,6 @@ export default tseslint.config(
       "react/jsx-uses-react": "off",
       "react/react-in-jsx-scope": "off"
     }
-  }
+  },
+  prettierConfig // Ajout de la config Prettier comme objet séparé
 );
