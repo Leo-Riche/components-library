@@ -7,4 +7,4 @@ export type { ButtonProps } from "./components/Button";
 export type { IconButtonProps } from "./components/IconButton";
 
 // Utilitaires
-export { helloWorld } from "./utils/hello";
+// export { helloWorld } from "./utils/hello";
