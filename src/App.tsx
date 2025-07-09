@@ -1,5 +1,5 @@
-import { Button } from './components/Button'
-import { IconButton } from './components/IconButton'
+import { Button } from './components/Button';
+import { IconButton } from './components/IconButton';
 
 function App() {
     return (
@@ -66,7 +66,7 @@ function App() {
                 
             </div>
         </div>
-    )
+    );
 }
 
-export default App
+export default App;
