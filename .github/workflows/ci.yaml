@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]         # Lance la CI à chaque push sur toutes les branches
+  pull_request:
+    branches: [main]         # Et aussi à chaque PR vers "main"
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest   # Machine Linux virtuelle fournie par GitHub
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20   # Adapte la version à celle de ton projet
+
+      - name: Install dependencies
+        run: npm ci          # "npm ci" = installation propre des dépendances
+
+      - name: Lint the code
+        run: npm run lint    # Vérifie le code avec ESLint
+
+      - name: Format the code
+        run: npm run format  # Formate le code avec Prettier
+
+      - name: Build the library
+        run: npm run build   # Compile le projet (adapter si besoin)
+
+      - name: Run tests
+        run: npm test        # Lance tes tests unitaires
