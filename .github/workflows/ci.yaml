@@ -24,5 +24,11 @@ jobs:
       - name: Build the library
         run: npm run build   # Compile le projet (adapter si besoin)
 
+      - name: Lint code
+        run: npm run lint    # Lance ESLint pour vérifier le code
+
+      - name: Format code
+        run: npm run format  # Formate le code avec Prettier
+
       - name: Run tests
         run: npm test        # Lance tes tests unitaires
