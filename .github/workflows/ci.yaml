@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main, leo, raphael, alyssia]         # Lance la CI à chaque push sur la branche "main"
+    branches: ["**"]         # Lance la CI à chaque push sur toutes les branches
   pull_request:
     branches: [main]         # Et aussi à chaque PR vers "main"
 
