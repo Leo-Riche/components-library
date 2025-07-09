@@ -13,8 +13,8 @@ function App() {
         <section className="mb-8 p-6 bg-white rounded-lg shadow-md border border-gray-200">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Composant Button</h2>
           <div className="flex flex-wrap gap-4 mb-4">
-            <Button onClick={() => alert("Button Primary clicked!")}>Primary</Button>
-            <Button variant="secondary" onClick={() => alert("Button Secondary clicked!")}>
+            <Button onClick={() => alert('Button Primary clicked!')}>Primary</Button>
+            <Button variant="secondary" onClick={() => alert('Button Secondary clicked!')}>
               Secondary
             </Button>
             <Button disabled>Disabled</Button>
@@ -30,12 +30,12 @@ function App() {
         <section className="mb-8 p-6 bg-white rounded-lg shadow-md border border-gray-200">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Composant IconButton</h2>
           <div className="flex flex-wrap gap-4 mb-4">
-            <IconButton icon="❤️" ariaLabel="J'aime" onClick={() => alert("Coeur cliqué!")} />
+            <IconButton icon="❤️" ariaLabel="J'aime" onClick={() => alert('Coeur cliqué!')} />
             <IconButton
               icon="⭐"
               ariaLabel="Favoris"
               variant="secondary"
-              onClick={() => alert("Étoile cliquée!")}
+              onClick={() => alert('Étoile cliquée!')}
             />
             <IconButton icon="🗑️" ariaLabel="Supprimer" disabled />
           </div>
@@ -49,12 +49,12 @@ function App() {
         <section className="mb-8 p-6 bg-white rounded-lg shadow-md border border-gray-200">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">Composant IconButton</h2>
           <div className="flex flex-wrap gap-4 mb-4">
-            <IconButton icon="❤️" ariaLabel="J'aime" onClick={() => alert("Coeur cliqué!")} />
+            <IconButton icon="❤️" ariaLabel="J'aime" onClick={() => alert('Coeur cliqué!')} />
             <IconButton
               icon="⭐"
               ariaLabel="Favoris"
               variant="secondary"
-              onClick={() => alert("Étoile cliquée!")}
+              onClick={() => alert('Étoile cliquée!')}
             />
             <IconButton icon="🗑️" ariaLabel="Supprimer" disabled />
           </div>
