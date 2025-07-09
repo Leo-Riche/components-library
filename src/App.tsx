@@ -16,6 +16,7 @@ function App() {
                         Composant Button
           </h2>
           <div className="flex flex-wrap gap-4 mb-4">
+
             <Button onClick={() => alert('Button Primary clicked!')}>
                             Primary
             </Button>
@@ -49,6 +50,7 @@ function App() {
               ariaLabel="Favoris"
               variant="secondary"
               onClick={() => alert('Étoile cliquée!')}
+
             />
             <IconButton
               icon="🗑️"
@@ -69,4 +71,6 @@ function App() {
   );
 }
 
+
 export default App;
+

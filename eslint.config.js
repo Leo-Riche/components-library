@@ -11,8 +11,7 @@ export default [
     rules: {
       'no-console': 'warn',
       'semi': ['error', 'always'],
-      'quotes': ['error', 'single'],
-      'indent': ['error', 2],
+      'react/jsx-uses-react': 'off',
     }
   }
 ];

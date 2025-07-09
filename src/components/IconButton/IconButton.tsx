@@ -30,12 +30,16 @@ export const IconButton: React.FC<IconButtonProps> = ({
   className = '',
 }) => {
   // Classes de base
-  const baseClasses = 'inline-flex items-center justify-center border border-transparent font-medium rounded-full transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 aspect-square';
+  const baseClasses =
+    'inline-flex items-center justify-center border border-transparent font-medium rounded-full transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 aspect-square';
+
 
   // Classes selon la variante
   const variantClasses = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    secondary: 'bg-transparent text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
+    secondary:
+      'bg-transparent text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
+
   };
 
   // Classes selon la taille
@@ -46,14 +50,18 @@ export const IconButton: React.FC<IconButtonProps> = ({
   };
 
   // Classes pour l'état désactivé
-  const disabledClasses = disabled ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer hover:scale-105';
+  const disabledClasses = disabled
+    ? 'opacity-60 cursor-not-allowed'
+    : 'cursor-pointer hover:scale-105';
+
 
   const finalClasses = [
     baseClasses,
     variantClasses[variant],
     sizeClasses[size],
     disabledClasses,
-    className
+    className,
+
   ].join(' ');
 
   return (

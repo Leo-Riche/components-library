@@ -27,12 +27,15 @@ export const Button: React.FC<ButtonProps> = ({
   className = '',
 }) => {
   // Classes de base
-  const baseClasses = 'inline-flex items-center justify-center border border-transparent font-medium rounded-md transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2';
+  const baseClasses =
+    'inline-flex items-center justify-center border border-transparent font-medium rounded-md transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2';
 
   // Classes selon la variante
   const variantClasses = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    secondary: 'bg-transparent text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
+    secondary:
+      'bg-transparent text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
+
   };
 
   // Classes selon la taille
@@ -50,6 +53,7 @@ export const Button: React.FC<ButtonProps> = ({
     variantClasses[variant],
     sizeClasses[size],
     disabledClasses,
+
     className
   ].join(' ');
 
