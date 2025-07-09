@@ -64,11 +64,7 @@ describe('Button Component', () => {
 
   it('ne devrait pas appeler onClick quand le bouton est désactivé', () => {
     const mockOnClick = vi.fn();
-    render(
-      <Button onClick={mockOnClick} disabled>
-        Test
-      </Button>
-    );
+    render(<Button onClick={mockOnClick} disabled>Test</Button>);
 
     const button = screen.getByRole('button');
     fireEvent.click(button);

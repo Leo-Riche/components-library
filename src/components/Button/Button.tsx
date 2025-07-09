@@ -35,6 +35,7 @@ export const Button: React.FC<ButtonProps> = ({
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
     secondary:
       'bg-transparent text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-blue-500',
+
   };
 
   // Classes selon la taille
@@ -52,11 +53,17 @@ export const Button: React.FC<ButtonProps> = ({
     variantClasses[variant],
     sizeClasses[size],
     disabledClasses,
-    className,
+
+    className
   ].join(' ');
 
   return (
-    <button className={finalClasses} onClick={onClick} disabled={disabled} type="button">
+    <button
+      className={finalClasses}
+      onClick={onClick}
+      disabled={disabled}
+      type="button"
+    >
       {children}
     </button>
   );
