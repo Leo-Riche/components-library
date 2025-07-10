@@ -19,7 +19,8 @@
     "test:e2e:report": "playwright show-report",
     "test:visual": "playwright test --project=chromium",
     "test:visual:update": "playwright test --project=chromium --update-snapshots",
-    "test:visual:ui": "playwright test --project=chromium --ui"
+    "test:visual:ui": "playwright test --project=chromium --ui",
+    "snapshots:linux": "powershell -ExecutionPolicy Bypass -File generate-linux-snapshots.ps1"
   },
   "dependencies": {
     "react": "^19.1.0",
