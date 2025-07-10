@@ -21,6 +21,9 @@ export default tseslint.config(
     rules: {
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      'no-console': 'warn',
+      'semi': ['error', 'always'],
+      'react/jsx-uses-react': 'off',
       // Allow both single and double quotes
     },
   }
