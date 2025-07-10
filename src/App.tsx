@@ -64,8 +64,6 @@ function App() {
             <IconButton icon="📍" ariaLabel="Localisation" size="large" />
           </div>
         </section>
-
-                
       </div>
     </div>
   );
