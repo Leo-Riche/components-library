@@ -24,23 +24,26 @@ jobs:
       - name: Install dependencies
         run: npm ci # "npm ci" = installation propre des dépendances
 
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Lint code
+        run: npm run lint # Vérifie le code avec ESLint
+
+      - name: Format code
+        run: npm run format  # Formate le code avec Prettier
+
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
         
       - name: Build the library
         run: npm run build # Compile le projet (adapter si besoin)
 
-      - name: Format code
-        run: npm run format  # Formate le code avec Prettier
-
       - name: Run tests
         run: npm test # Lance tes tests unitaires
 
       - name: Check formatting
         run: npm run format:check
-
-      - name: Type check
-        run: npm run typecheck
 
       - name: Run coverage
         run: npm run test:coverage
