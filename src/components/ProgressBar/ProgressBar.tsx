@@ -1,27 +1,17 @@
 import React from 'react';
 
 export interface ProgressBarProps {
-    /** La valeur actuelle du progrès (0-100) */
     value: number;
-    /** La valeur maximale (par défaut 100) */
     max?: number;
-    /** La variante de couleur */
     variant?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
-    /** La taille de la barre de progression */
     size?: 'small' | 'medium' | 'large';
-    /** Afficher le pourcentage */
     showPercentage?: boolean;
-    /** Afficher l'étiquette */
     label?: string;
-    /** Animation de la barre */
     animated?: boolean;
-    /** Classe CSS personnalisée */
     className?: string;
 }
 
-/**
- * Composant ProgressBar réutilisable avec Tailwind CSS
- */
+
 export const ProgressBar: React.FC<ProgressBarProps> = ({
     value,
     max = 100,
@@ -32,20 +22,16 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
     animated = false,
     className = '',
 }) => {
-    // Calculer le pourcentage
     const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
 
-    // Classes de base pour le conteneur
     const containerClasses = 'w-full bg-gray-200 rounded-full overflow-hidden';
 
-    // Classes selon la taille
     const sizeClasses = {
         small: 'h-2',
         medium: 'h-4',
         large: 'h-6',
     };
 
-    // Classes selon la variante pour la barre de progression
     const variantClasses = {
         default: 'bg-gray-500',
         primary: 'bg-blue-600',
@@ -55,12 +41,10 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
         danger: 'bg-red-600',
     };
 
-    // Classes pour l'animation
     const animationClasses = animated
         ? 'transition-all duration-300 ease-out'
         : 'transition-all duration-200 ease-out';
 
-    // Classes pour l'animation striée (optionnelle)
     const stripedClasses = animated
         ? 'bg-gradient-to-r from-transparent via-white to-transparent bg-[length:1rem_1rem] animate-pulse'
         : '';
@@ -80,7 +64,6 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
 
     return (
         <div className="w-full">
-            {/* Étiquette et pourcentage */}
             {(label || showPercentage) && (
                 <div className="flex justify-between items-center mb-2">
                     {label && (
@@ -96,7 +79,6 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
                 </div>
             )}
 
-            {/* Barre de progression */}
             <div className={containerFinalClasses}>
                 <div
                     className={barClasses}
@@ -107,7 +89,6 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
                     aria-valuemax={max}
                     aria-label={label || `Progress: ${Math.round(percentage)}%`}
                 >
-                    {/* Pourcentage affiché dans la barre (pour les barres larges) */}
                     {size === 'large' && showPercentage && (
                         <span className="text-xs font-medium text-white">
                             {Math.round(percentage)}%
