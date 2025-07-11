@@ -112,6 +112,11 @@ Le pipeline GitHub Actions automatise :
 6. **Tests visuels** - Playwright
 7. **Publication** - NPM (sur push vers main)
 
+## 👥 Collaborateurs
+  * Léo Riché
+  * Raphaël Chiche
+  * Alyssia Lorsold Pradon
+
 
 ## 📄 License
 
